@@ -1,0 +1,244 @@
+body {
+    background-color: #fdf5e6;
+    color: #4b2c20;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+}
+nav {
+    background-color: #4b2c20;
+    padding: 20px;
+    text-align: center;
+    animation: slideDown 0.6s ease-out;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 15px;
+    font-weight: bold;
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 50px;
+}
+button {
+    background-color: #8b5e3c;
+    color: white;
+    border: none;
+}
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 250px);
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #4b2c20;
+    transition: 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideLeft {
+    from { opacity: 0; transform: translateX(-30px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+@keyframes slideRight {
+    from { opacity: 0; transform: translateX(30px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+h1 { animation: slideDown 0.8s ease-out; text-align: center; }
+.left-side { animation: slideLeft 0.8s ease-out; }
+.right-side { animation: slideRight 0.8s ease-out; }
+.product-grid .card:nth-child(-n+3) { animation: slideLeft 0.8s ease-out; }
+.product-grid .card:nth-child(n+4) { animation: slideRight 0.8s ease-out; }
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 50px;
+    margin-top: 20px;
+}
+.owner-img {
+    width: 350px;
+    height: auto;
+    border-radius: 15px;
+    border: 3px solid #4b2c20;
+    box-shadow: 10px 10px 0px #4b2c20; 
+    flex-shrink: 0;
+}
+.right-side {
+    max-width: 500px;
+    text-align: left;
+}.container img {
+    animation: slideDown 0.6s ease-out;
+}
+
+h1 {
+    animation: slideDown 0.8s ease-out;
+    text-align: left;
+}
+
+.container h2 {
+    animation: slideDown 1s ease-out;
+}
+
+.container button {
+    animation: slideDown 1.2s ease-out;
+    background-color: #8b5e3c;
+    color: white;
+    border: none;
+    font-size: 20px;
+    padding: 15px;
+}.product-title {
+    text-align: center;
+}
+.about-title {
+    text-align: center;
+}.contact-title {
+    text-align: center;
+}
+/* wrapper para sa image + button */
+.img-wrapper {
+    position: relative;
+    display: inline-block;
+}
+.play-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: none;
+
+    background: rgba(0,0,0,0.6);
+    color: white;
+    cursor: pointer;
+
+    /* 🔥 ito yung fix */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 18px;
+}
+
+/* hover effect */
+.play-btn:hover {
+    background: rgba(0,0,0,0.8);
+}
+/* pang music yung new page*/
+.music-title {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.music-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 250px);
+    gap: 30px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.music-card {
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid #4b2c20;
+    transition: 0.3s;
+}
+
+.music-card:hover {
+    transform: translateY(-5px);
+}
+
+.music-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.music-card button {
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    background: #8b5e3c;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}/* animation for music cards */
+.music-card:nth-child(-n+3) {
+    animation: slideLeft 0.8s ease-out;
+}
+
+.music-card:nth-child(n+4) {
+    animation: slideRight 0.8s ease-out;
+}
+
+/* sa product order*/
+.order-btn {
+    margin-left: 10px;
+    padding: 5px 10px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.order-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-box {
+    background: #fdf5e6;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    border: 3px solid #4b2c20;
+    width: 250px;
+}
+
+.qty button {
+    padding: 5px 10px;
+    margin: 5px;
+}
+
+#total {
+    color: green;
+    font-size: 18px;
+}
+
+#success-msg {
+    display: none;
+    color: green;
+    margin-top: 10px;
+}
+.owner-img {
+    width: 350px;
+    height: 350px; /* 🔥 ito fix para hindi mag-iba shape */
+    object-fit: cover; /* para hindi ma-stretch */
+    display: block;
+}
