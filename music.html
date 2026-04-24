@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kape Ni Marc</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <a href="index.html">HOME</a>
+    <a href="product.html">PRODUCT</a>
+    <a href="about.html">ABOUT US</a>
+    <a href="contact.html">CONTACT US</a>
+    <a href="music.html">MUSIC</a>
+</nav>
+
+<h1 class="music-title">Music Library</h1>
+
+<div class="music-grid">
+
+    <div class="music-card">
+        <img src="images/cover1.jpg">
+        <h3>Multo Stripped Down</h3>
+        <p>Cup of joe</p>
+        <button onclick="togglePlay('audio/music1.mp3')">▶</button>
+    </div>
+
+    <div class="music-card">
+        <img src="images/cover2.jpg">
+        <h3>Buko</h3>
+        <p>Jireh Lim</p>
+        <button onclick="togglePlay('audio/music2.mp3')">▶</button>
+    </div>
+
+    <div class="music-card">
+        <img src="images/cover3.jpg">
+        <h3>Pangarap lang kita</h3>
+        <p>Parokya ni edgar</p>
+        <button onclick="togglePlay('audio/music3.mp3')">▶</button>
+    </div>
+
+    <div class="music-card">
+        <img src="images/cover4.jpg">
+        <h3>Fallen</h3>
+        <p>Lola Amour</p>
+        <button onclick="togglePlay('audio/music4.mp3')">▶</button>
+    </div>
+
+    <div class="music-card">
+        <img src="images/cover5.jpg">
+        <h3>711</h3>
+        <p>Toneejay</p>
+        <button onclick="togglePlay('audio/music5.mp3')">▶</button>
+    </div>
+
+    <div class="music-card">
+        <img src="images/cover6.jpg">
+        <h3>Isa Lang</h3>
+        <p>Arthur Nery</p>
+        <button onclick="togglePlay('audio/music6.mp3')">▶</button>
+    </div>
+
+</div>
+
+<!-- ✅ IISA LANG DAPAT -->
+<audio id="globalAudio"></audio>
+
+<!-- ❌ TINANGGAL: player (conflict yan) -->
+
+<script src="script.js"></script>
+</body>
+</html>
